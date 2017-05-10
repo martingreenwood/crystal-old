@@ -1,0 +1,137 @@
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	color: $text-input;
+	border: 1px solid $border-input;
+
+	&:focus {
+
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+	
+}
+
+textarea {
+	
+}
+
+#main {
+	
+	.gform_wrapper {
+		margin: 0;
+
+		.validation_error {
+			color: red;
+			border-color: red;
+		}
+
+		.gfield_error {
+			color: red;
+			border-color: red;
+			padding: 10px;
+		}
+
+		.validation_message {
+			color: red;
+		}
+
+		.gform_fields {
+
+			.gfield {
+				padding-right: 0;
+				margin-top: 0;
+				margin-right: 0;
+				margin-bottom: 15px;
+				position: relative;
+				max-width: 100% !important;
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.field_sublabel_below {
+
+			span {
+				position: relative;
+			}
+
+			.ginput_complex, div[class*=gfield_time_] {
+
+				&.ginput_container {
+					
+					label {
+						margin: 0;
+						position: absolute;
+						bottom: 12px;
+						right: 21px;
+						color: #999;
+						font-weight: 300;
+					}
+				}
+			}
+		}
+
+
+		input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea {
+			border: 0;
+			padding: 8px 10px;
+			border-radius: 0;
+			border:1px solid white;
+
+			&:hover, &:active, &:focus {
+				box-shadow: none;
+				outline: 0;
+				border:1px solid white;
+			}
+		}
+
+		select {
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			border: 0;
+			padding: 8px 10px;
+			border-radius: 0;
+			border:1px solid white;
+		}
+
+		.top_label  {
+
+			.ginput_container {
+				margin-top: 0;
+			}
+
+			.gfield_label {
+				color: white;
+			}
+		}
+
+		.gform_footer {
+			padding: 0;
+
+			input.button, input[type=submit] {
+				background: transparent;
+				border: 1px solid white;
+				color: white;
+				border-radius: 0;
+				outline: 0;
+
+				&:hover {
+					color: black;
+					background: white;
+				}
+			}
+		}
+	}
+}

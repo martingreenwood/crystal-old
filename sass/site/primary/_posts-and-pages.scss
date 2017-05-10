@@ -1,0 +1,653 @@
+/*==============================
+=            SLIDER            =
+==============================*/
+
+#slider {
+	width: 100%;
+	visibility: hidden;
+	overflow: hidden;
+	height: 133px;
+
+	@include media ($medium-screen-up) {
+		visibility: visible;
+		height: auto;
+		max-height: 600px;
+		overflow: hidden
+	}
+
+	.slide {
+		position: relative;
+
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.caption {
+		position: absolute;
+		top: 50%;
+		margin-top: -42px;
+		
+		h2 {
+			white-space: pre;
+			text-transform: uppercase;
+			line-height: 1;
+			font-size: 38px;
+			margin: 0;
+			display: block;
+
+			@include media ($large-screen-up) {
+				font-size: 60px;
+			}
+		}
+
+		p {
+			font-size: 16px;
+			white-space: pre;
+			line-height: 1;
+			margin-top: 10px;
+
+			@include media ($large-screen-up) {
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+body:not(.home) {
+
+	#slider {
+
+		.slide {
+
+			img {
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				-o-filter: grayscale(100%);
+				-ms-filter: grayscale(100%);
+				filter: grayscale(100%);
+			}
+		}
+	}
+}
+
+
+/*============================
+=            HOME            =
+============================*/
+
+#main {
+	background: #0a0a0a;
+	padding: 60px 0;
+
+	@include media ($medium-screen-up) {
+		padding: 100px 0;
+	}
+
+	.entry-content, .entry-header {
+
+		h1 {
+			margin: 0;
+			color: white;
+			text-align: center;
+			font-size: 25px;
+
+			@include media ($medium-screen-up) {
+				font-size: 35px;
+			}
+
+			@include media ($large-screen-up) {
+				font-size: 45px;
+			}
+		}
+
+		h2, h3, h4, h5 {
+			color: white;
+		}
+
+		p, a {
+			color: white;
+			text-align: center;
+			margin-bottom: 15px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		ul {
+			margin-left: 0;
+			list-style: none;
+
+			li {
+				color: white;
+				padding-left: 15px;
+
+				&:before {
+					content: "- ";
+					position: absolute;
+					margin-left: -10px;	
+				}
+			}
+		}
+	}
+
+	.entry-header {
+		margin: 0 0 40px 0;
+	}
+
+	.inner {
+
+		.entry-content {
+
+			@include media ($medium-screen-up) {
+				columns: 2;
+				-webkit-columns: 2;
+				-moz-columns: 2;
+			}
+
+			p, a {
+				margin-bottom: 15px;
+				text-align: left;
+			}
+		}
+	}
+}
+
+.home {
+	#cta {
+		.overlay {
+			@include background-opacity($pink, 0.5);
+		}
+	}
+}
+
+.landlord-pack {
+	#cta {
+		.overlay {
+			@include background-opacity($purple, 0.5);
+		}
+	}
+}
+
+.student-pack {
+	#cta {
+		.overlay {
+			@include background-opacity($pink, 0.5);
+		}
+	}
+}
+
+.nightclubs-bars-restaurant-pack {
+	#cta {
+		.overlay {
+			@include background-opacity($orange, 0.5);
+		}
+	}
+}
+
+.retail-service-pack {
+	#cta {
+		.overlay {
+			@include background-opacity($red, 0.5);
+		}
+	}
+}
+
+.office-service-pack {
+	#cta {
+		.overlay {
+			@include background-opacity($blue, 0.5);
+		}
+	}
+}
+
+/*=============================
+=            LOGIN            =
+=============================*/
+
+.login {
+
+	#main {
+		background: #f9f9f9;
+
+		.inner {
+
+			.entry-header h1 {
+				color: black;
+			}
+
+			.entry-content {
+				columns: 1;
+				-webkit-columns: 1;
+				-moz-columns: 1;
+
+				p {
+					color: black;
+				}
+
+				.tml {
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}
+
+/*============================
+=            FAQs            =
+============================*/
+
+#main {
+
+	.questions {
+		margin-top: 49px;
+		padding-top: 49px;
+		border-top: 1px solid #fff;
+		columns: 1;
+		-webkit-columns: 1;
+		-moz-columns: 1;
+
+		@include media ($medium-screen-up) {
+			columns: 2;
+			-webkit-columns: 2;
+			-moz-columns: 2;			
+		}
+
+		.question {
+			display: inline-block;
+			margin-bottom: 30px;
+			text-align: left;
+			color: white;
+			vertical-align: top;
+
+			p {
+				color: white;
+			}
+		}
+	}
+}
+
+/*=============================
+=            TERMS            =
+=============================*/
+
+.terms-conditons {
+	
+	#main {
+	
+		.inner {
+	
+			.entry-content {
+				columns: 1;
+				-webkit-columns: 1;
+				-moz-columns: 1;
+			}
+		}
+	}
+}
+
+
+/*================================
+=            DOMESTIC            =
+================================*/
+
+.domestic {
+	
+	#main {
+	
+		.inner {
+	
+			.entry-content {
+				columns: 1;
+				-webkit-columns: 1;
+				-moz-columns: 1;
+
+				p {
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+
+/*========================================
+=            SERVICES & PACKS            =
+========================================*/
+
+#services, #packs {
+	text-align: center;
+	background: white;
+	padding: 60px 0;
+
+	@include media ($medium-screen-up) {
+		padding: 100px 0;
+	}
+
+	h1 {
+		margin: 0 0 60px 0;
+		text-align: center;
+		font-size: 25px;
+
+		@include media ($medium-screen-up) {
+			font-size: 35px;
+		}
+
+		@include media ($large-screen-up) {
+			font-size: 45px;
+		}
+	}
+
+	.addons {
+
+		p {
+			font-size: 16px;
+			font-weight: 600;
+		}
+	}
+
+	.list-of-services {
+		float: left;
+		width: 100%;
+
+		.service {
+			margin-bottom: 30px;
+			position: relative;
+			padding: 0 10px;
+			box-sizing: border-box;
+
+			@include media ($medium-screen-up) {
+				//width: 33.333%;
+				//float: left;
+			}
+
+			@include media ($large-screen-up) {
+				//margin-bottom: 0;
+				//width: 16.666%;
+			}
+			
+			.icon {
+				width: 200px;
+				height: 200px;
+				margin: 0 auto 20px auto;
+				background-position: center;
+				background-repeat: no-repeat;
+
+				@include media ($medium-screen-up) {
+					//width: 150px;
+					//height: 150px;
+				}
+			}
+
+			h3 {
+				font-size: 14px;
+				text-transform: uppercase;
+				min-height: 56px;
+				margin: 0;
+
+				@include media ($medium-screen-up) { 
+					font-size: 16px;
+				}
+			}
+
+			button {
+				border: 3px solid black;
+				color: black;
+				background: transparent;
+				border-radius: 0;
+				padding: 6px 20px;
+				text-transform: uppercase;
+				outline: 0;
+				transition: all 300ms;
+				margin-top: auto20px;
+
+				@include media ($medium-screen-up) {
+					padding: 6px 40px;
+				}
+
+				&:hover {
+					background: black;
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+/*=============================
+=            PACKS            =
+=============================*/
+
+#packs {
+	background: #f9f9f9;
+}
+
+
+/*=====================================
+=            CONTACTUS BOX            =
+=====================================*/
+
+#contactus {
+	background: #e3e3e3;
+	padding: 60px 0;
+	text-align: center;
+
+	@include media ($medium-screen-up) { 
+		text-align: left;
+	}
+
+	h3 {
+		font-size: 16px;
+		margin: 0 0 20px 0;
+		text-transform: uppercase;
+		margin: 0 0 20px 0;
+		width: 100%;
+		text-align: center;
+		line-height: 1.6;
+		
+
+		@include media ($medium-screen-up) { 
+			font-size: 18px;
+			width: auto;
+			text-align: left;
+			float: left;
+			margin: 0;
+			line-height: 40px;
+		}
+
+		@include media ($large-screen-up) { 
+			font-size: 35px;
+		}
+	}
+
+	a {
+		border: 3px solid black;
+		color: black;
+		background: transparent;
+		border-radius: 0;
+		padding: 6px 40px;
+		text-transform: uppercase;
+		outline: 0;
+		transition: all 300ms;
+		margin: 0 auto;
+
+		&:hover {
+			background: black;
+			color: white;
+		}
+		
+		@include media ($medium-screen-up) { 
+			float: right;
+			margin: 0;
+		}
+	}
+}
+
+.contact {
+
+	#main {
+
+		.entry-header {
+			
+			h1 {
+				margin-bottom: 0;
+				line-height: 1;
+			}
+
+			h2 {
+				margin-bottom: 40px;
+				text-align: center;
+			}
+		}
+
+
+		article {
+
+			h3 {
+				color: white;
+				margin-bottom: 0;
+			}
+
+			p {
+				color: white;
+				margin-bottom: 20px;
+
+				&:last-of-type {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+
+	#cta {
+
+		ul {
+			list-style: none;
+			margin: 0;
+
+			li {
+				display: inline-block;
+				
+				a {
+					border-radius: 50%;
+					background: white;
+					color: black;
+					font-size: 32px;
+					width: 80px;
+					height: 80px;
+					line-height: 80px;
+					padding: 0;
+					margin: 05px;
+				}
+			}
+		}
+	}
+}
+
+
+/*===========================
+=            CTA            =
+===========================*/
+
+#cta {
+	text-align: center;
+	min-height: 400px;
+	background: transparent;
+	position: relative;
+
+	.overlay {
+		padding: 60px 0;
+		height: 100%;
+		position: absolute;
+		width: 100%;
+		background: rgba(0,0,0,0.3);
+
+		@include media ($medium-screen-up) {
+			padding: 100px 0;
+		}
+	}
+
+	h1 {
+		margin: 0 0 40px 0;
+		text-align: center;
+		font-size: 25px;
+		color: white;
+
+		@include media ($medium-screen-up) {
+			font-size: 35px;
+		}
+
+		@include media ($large-screen-up) {
+			font-size: 45px;
+		}
+	}
+
+	p, a {
+		color: white;
+		font-size: 20px;
+	}
+
+	a {
+		display: inline-block;
+		border: 1px solid white;
+		padding: 10px 15px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+}
+
+/*================================
+=            PARALLAX            =
+================================*/
+
+.parallax-mirror {
+	img {
+		-webkit-x: grayscale(100%);
+		-moz-filter: grayscale(100%);
+		-o-filter: grayscale(100%);
+		-ms-filter: grayscale(100%);
+		filter: grayscale(100%);
+	}
+}
+
+
+/*===============================
+=            Conatct            =
+===============================*/
+
+.contact {
+
+	#main {
+
+		.entry-content, .entry-header {
+
+			h1, h2, h3 {
+			}
+
+			label {
+			}
+
+			p, a {
+				text-align: left;
+			}
+		}
+	}
+}
+
+/*====================================
+=            TESTIMONIALS            =
+====================================*/
+
+.testimonial {
+	width: 60%;
+	box-sizing: border-box;
+	margin: 0 auto 30px;
+	border-bottom: 1px solid #666;
+	padding-bottom: 30px;
+
+	h3, p {
+		color: white;
+	}
+}
